@@ -26,6 +26,34 @@ function msToKmh(mps) {
   return (mps * 3.6).toFixed(2)
 }
 
+/* ou encore */
+
+
+function degreeToCardinal(deg) {
+var degrees = parseFloat(deg)
+  const cardinalDirections = [
+    "Nord",
+    "Nord Nord Est",
+    "Nord Est",
+    "Est Nord Est",
+    "Est",
+    "Est Sud Est",
+    "Sud Est",
+    "Sud Sud Est",
+    "Sud",
+    "Sud Sud Ouest",
+    "Sud Ouest",
+    "Ouest Sud Ouest",
+    "Ouest",
+    "Ouest Nord Ouest",
+    "Nord Ouest",
+    "Nord Nord Ouest"
+  ]
+
+  const degreesPerDirection = 360 / cardinalDirections.length
+  const index = Math.floor((degrees % 360) / degreesPerDirection)
+  return cardinalDirections[index]
+}
 
 ```
 

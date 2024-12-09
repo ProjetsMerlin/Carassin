@@ -8,7 +8,7 @@ const unites = {
   "feels_like" : "° Ressenti",
   "temp_max" : "° Max.",
   "wind_speed" : " km/h",
-  "wind_deg" : "°",
+  "wind_deg" : "",
   "sunset" : "",
   "sunrise" : "",
 }
@@ -28,7 +28,7 @@ function pascalToCelcius(kelvin) {
 
 /* Convertit les m/s en km/h */
 function msToKmh(mps) {
-  return (mps * 3.6).toFixed(2)
+  return (mps * 3.6).toFixed(0)
 }
 
 function createElement(element, data, parent, unite) {
@@ -36,6 +36,32 @@ function createElement(element, data, parent, unite) {
   element.textContent = data + unites[unite]
   var container = document.querySelector(parent)
   return container.appendChild(element)
+}
+
+function degreeToCardinal(deg) {
+var degrees = parseFloat(deg)
+  const cardinalDirections = [
+    "Nord",
+    "Nord Nord Est",
+    "Nord Est",
+    "Est Nord Est",
+    "Est",
+    "Est Sud Est",
+    "Sud Est",
+    "Sud Sud Est",
+    "Sud",
+    "Sud Sud Ouest",
+    "Sud Ouest",
+    "Ouest Sud Ouest",
+    "Ouest",
+    "Ouest Nord Ouest",
+    "Nord Ouest",
+    "Nord Nord Ouest"
+  ]
+
+  const degreesPerDirection = 360 / cardinalDirections.length
+  const index = Math.floor((degrees % 360) / degreesPerDirection)
+  return cardinalDirections[index]
 }
 
 async function decryptRSA(encryptedData, privateKey) {
@@ -86,7 +112,7 @@ async function runAPI() {
       createElement('span', pascalToCelcius ( item.main.temp_max ), "#temp_max", "temp_max")
       createElement('span', pascalToCelcius ( item.main.temp_min ), "#temp_min", "temp_min")
       createElement('span', msToKmh ( item.wind.speed ), "#wind_speed", "wind_speed")
-      createElement('span', item.wind.deg, "#wind_deg", "wind_deg")
+      createElement('span', degreeToCardinal ( item.wind.deg ), "#wind_deg", "wind_deg")
       createElement('span', item.main.humidity, "#humidity", "humidity")
       createElement('span', timeToHour ( item.sys.sunrise ), "#sunrise", "sunrise")
       createElement('span', timeToHour ( item.sys.sunset ), "#sunset", "sunset")
