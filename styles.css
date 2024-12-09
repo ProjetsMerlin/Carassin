@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --primary_color : #1391b3
+  }
+
+h2,
+h3,
+i {
+    color: var(--primary_color);
+}
