@@ -1,4 +1,4 @@
-# Carasin
+# Carassin
 
 ## Le projet
 Carassin est une application météo qui utilise l'API "OpenWeatherMap". Ici, l'objectif était surtout de cacher la clé API utilisée.
