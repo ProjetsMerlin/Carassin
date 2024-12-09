@@ -1,12 +1,12 @@
 # Carasin
 
 ## Le projet
-Carassin est une application météo qui utilise l'API "OpenWeatherMap". ici l'objectif était surtout de cacher la clé API utilisée.
+Carassin est une application météo qui utilise l'API "OpenWeatherMap". Ici, l'objectif était surtout de cacher la clé API utilisée.
 Je le fais via un cryptage et décryptage RSA (+ de détail dans le fichier generate.html)
-Si la clé publique et privée permettre de décrypter la clé API, alors la requête fonctionne et affiche la météo du jour.
+Si la clé publique et privée permettent de décrypter la clé API, alors la requête fonctionne et affiche la météo du jour.
 
 ## Javascript
-Remarques : à travers ce projet, quelue fonction JS intéressantes sont créés pour formatter certaines données.
+Remarques : à travers ce projet, quelques fonctions JS intéressantes sont créés pour formater certaines données.
 Voilà les exemples : 
 
 ```JAVSCRIPT
@@ -32,7 +32,7 @@ function msToKmh(mps) {
 ## Style
 Le framework css utilisé dans le but de styliser quelque peu le rendu, est Tailwind.css
 
-## le logo
+## Le logo
 Le logo a été créé à l'aide d'un générateur de logo (voir lien ci-dessous). Le logo est un poisson. Car "Carassin" est le nom d'un poisson. 🐟 👍
 
 ### Liens utiles :
