@@ -40,7 +40,7 @@ function createElement(element, data, parent, unite) {
 
 /* Convertit la direction du vente en point cardinaux */
 function degreeToCardinal(deg) {
-var degrees = parseFloat(deg)
+  var degrees = parseFloat(deg)
   const cardinalDirections = [
     "Nord",
     "Nord Nord Est",
@@ -59,17 +59,14 @@ var degrees = parseFloat(deg)
     "Nord Ouest",
     "Nord Nord Ouest"
   ]
-
   const degreesPerDirection = 360 / cardinalDirections.length
   const index = Math.floor((degrees % 360) / degreesPerDirection)
   return cardinalDirections[index]
 }
 
-if (window.location.hostname === 'localhost') {
-  //var server = 'server-sample.php'
-  var server = 'server.php'
-}
-else {
+var server = 'server.php'
+if ( window.location.hostname !== 'localhost' ) {
+  server = 'server-sample.php'
 }
 
 async function runAPI(server) {
@@ -92,7 +89,12 @@ async function runAPI(server) {
       image.src = icon
     })
   })
-  .catch(error => console.error('Error:', error))
+  .catch(error => {
+    createElement('span', "Aie !", "#description", "description")
+    const elements = document.querySelectorAll('.wrap');
+    elements.forEach(element => {
+      element.remove()
+    })
+  })
 }
-
 runAPI(server)
