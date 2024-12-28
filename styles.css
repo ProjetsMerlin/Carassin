@@ -1,3 +1,10 @@
+*,*:after,*:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,8 +19,93 @@ body {
     --primary_color : #1391b3
 }
 
-h2,
-h3,
-i {
+h2, h3, i {
     color: var(--primary_color);
+}
+
+.card {
+    color: #494850;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover, .card:active {
+    background: #eee;
+}
+
+.card h2 {
+    color: #2C2C34;
+}
+
+.card p {
+    color: #555;
+}
+
+.card span {
+    color: white;
+    background-color: #978897;
+}
+
+.center {
+    text-align: center;
+}
+
+.flx {
+    display: flex;
+    align-items: stretch;
+    align-content: start;
+    flex-wrap: wrap;
+}
+
+.container--xl {
+    margin: 0px auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+/* link */
+.card {
+    display: block;
+    margin: 1%;
+    padding: 24px;
+    width: 100%;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        width: 23%;
+    }
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    height: calc( 1.6em * 2);
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.card p {
+    display: block;
+    height: 50px;
+    font-size: 1em;
+}
+
+.card span {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 9px;
+    text-align: center;
+    font-size: .86em;
+    border-radius: 12px;
+}
+
+.card img {
+    display: block;
+    margin-left: calc(100% - 64px);
+    width: 48px;
+    height: auto;
+    border-radius: 50%;
 }

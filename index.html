@@ -6,15 +6,30 @@
     <title>Carassin</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen">
+<body class="min-h-screen h-auto">
+    <div class="text-center">
+        <a href="index.html">
+            <img src="favicon.png" class="m-auto my-2" alt="Carassin" title="Carassin" />
+            <h1 class="my-4 font-bold text-3xl">Carassin</h1>
+        </a>
+        <menu class="fixed bottom-0 w-full">
+            <nav class="sticky bottom-0 mx-auto flex w-80 justify-around gap-8 border-t bg-white px-10 py-4 text-xs sm:max-w-md sm:rounded-t-xl sm:border-transparent sm:text-sm sm:shadow-2xl">
+                <a href="index.html" class="flex items-center gap-1 text-gray-400 transition duration-100 hover:font-bold hover:text-gray-500 active:text-gray-600">
+                    <img src="img/cloud.svg" width="18" alt="cloud" />
+                    <span>Météo</span>
+                </a>
+                <a href="tv.html" class="flex items-center gap-1 text-gray-400 transition duration-100 hover:font-bold hover:text-gray-500 active:text-gray-600">
+                    <img src="img/tv.svg" width="18" alt="tv" />
+                    <span>TV</span>
+                </a>
+            </nav>
+        </menu>
+    </div>
     <div class="w-full flex items-center justify-center">
         <div class="flex flex-col min-w-80 bg-white rounded p-4 w-full max-w-xs text-center">
-            <div class="text-align">
-                <img src="favicon.png" class="m-auto my-2" alt="Carassin" title="Carassin" />
-            </div>
             <div class="wrap text-6xl self-center inline-flex items-center justify-center rounded-lg h-32 w-32">
                 <img id="icon" alt="Carassin" title="Carassin" class="h-32 w-auto invert" />
             </div>
@@ -34,28 +49,28 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap flex flex-row justify-between mt-6">
+            <div class="wrap flex flex-row justify-between items-baseline mt-6">
                 <div class="flex flex-col items-center">
                     <div class="font-medium text-sm">
-                        <i class="fa-solid fa-wind"></i>
+                        <img src="img/wind.svg" width="18" alt="wind" />
                     </div>
                     <div id="wind_speed" class="text-sm text-gray-500"></div>
                 </div>
                 <div class="flex flex-col items-center">
                     <div class="font-medium text-sm">
-                        <i class="fa-regular fa-compass"></i>
+                        <img src="img/compass.svg" width="18" alt="compass" />
                     </div>
                     <div id="wind_deg" class="text-sm text-gray-500"></div>
                 </div>
                 <div class="flex flex-col items-center">
                     <div class="font-medium text-sm">
-                        <img src="img/sunrise.svg" width="24" alt="sunrise" />
+                        <img src="img/sunrise.svg" width="26" alt="sunrise" />
                     </div>
                     <div id="sunrise" class="text-sm text-gray-500"></div>
                 </div>
                 <div class="flex flex-col items-center">
                     <div class="font-medium text-sm">
-                        <img src="img/sundown.svg" width="24" alt="sunrise" />
+                        <img src="img/sundown.svg" width="26" alt="sundown" />
                     </div>
                     <div id="sunset" class="text-sm text-gray-500"></div>
                 </div>

@@ -1,12 +1,10 @@
 # Carassin
 
 ## Le projet
-Carassin est une application météo qui utilise l'API "OpenWeatherMap". Ici, l'objectif était surtout de cacher la clé API utilisée.
-Je le fais via un cryptage et décryptage RSA (+ de détail dans le fichier generate.html)
-Si la clé publique et privée permettent de décrypter la clé API, alors la requête fonctionne et affiche la météo du jour.
+Carassin est un exemple de site web qui appelle : ou une API standard avec une clé API, ou réalisant une requête qui appelle un site web pour en aller chercher le contenu (ou une partie de son contenu). Ici, la page principale est une application météo qui utilise l'API "OpenWeatherMap". Mais la deuxième page affiche uniquement les films de la soirée depuis le site "https://www.mon-programme-tv.be/"
 
-## Javascript
-Remarques : à travers ce projet, quelques fonctions JS intéressantes sont créés pour formater certaines données.
+## Dev
+Remarques : à travers ce projet, quelques fonctions JS intéressantes sont créés pour formater certaines données météorologique
 Voilà les exemples : 
 
 ```JAVSCRIPT
@@ -61,9 +59,10 @@ var degrees = parseFloat(deg)
 Le framework css utilisé dans le but de styliser quelque peu le rendu, est Tailwind.css
 
 ## Le logo
-Le logo a été créé à l'aide d'un générateur de logo (voir lien ci-dessous). Le logo est un poisson. Car "Carassin" est le nom d'un poisson. 🐟 👍
+Le logo a été créé à l'aide d'un générateur de logo (voir lien ci-dessous). Le logo est un poisson. Car "Carassin", est le nom d'un poisson. 🐟 👍
 
 ### Liens utiles :
-- Documentation de l'API "OpenWeatherMape" : https://openweathermap.org/api
+- Documentation de l'API "OpenWeatherMap" : https://openweathermap.org/api
 - Tailwind css : https://tailwindcss.com
 - Générateur de logo : https://www.design.com
+- Programme tv : https://www.mon-programme-tv.be

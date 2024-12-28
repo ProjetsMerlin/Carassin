@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carassin</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/fontawesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen h-auto">
+    <div class="text-center">
+        <div class="text-center">
+            <a href="index.html">
+                <img src="favicon.png" class="m-auto my-2" alt="Carassin" title="Carassin" />
+                <h1 class="my-4 font-bold text-3xl">Carassin</h1>
+            </a>
+            <menu class="fixed bottom-0 w-full">
+                <nav class="sticky bottom-0 mx-auto flex w-80 justify-around gap-8 border-t bg-white px-10 py-4 text-xs sm:max-w-md sm:rounded-t-xl sm:border-transparent sm:text-sm sm:shadow-2xl">
+                    <a href="index.html" class="flex items-center gap-1 text-gray-400 transition duration-100 hover:font-bold hover:text-gray-500 active:text-gray-600">
+                        <img src="img/cloud.svg" width="18" alt="cloud" />
+                        <span>Météo</span>
+                    </a>
+                    <a href="tv.html" class="flex items-center gap-1 text-gray-400 transition duration-100 hover:font-bold hover:text-gray-500 active:text-gray-600">
+                        <img src="img/tv.svg" width="18" alt="tv" />
+                        <span>TV</span>
+                    </a>
+                </nav>
+            </menu>
+        </div>
+    </div>
+    <div class="flx container container--xl js_fetdata"></div>
+    <script src="scripts_tv.js"></script>
+</body>
+</html>
