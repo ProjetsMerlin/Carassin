@@ -50,7 +50,7 @@ function runHtml(data) {
 
 const
 //local = "http://localhost",
-local = "https://lintermediaire.be",
+local = "https://carassin.lintermediaire.be",
 website = "https://www.mon-programme-tv.be",
 article = document.querySelector('.js_fetdata'),
 url = 'fetchWebsite.php',
