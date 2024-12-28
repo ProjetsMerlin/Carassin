@@ -64,13 +64,10 @@ function degreeToCardinal(deg) {
   return cardinalDirections[index]
 }
 
-var server = 'server.php'
-if ( window.location.hostname !== 'localhost' ) {
-  server = 'server-sample.php'
+server = 'server-sample.php'
+if ( window.location.hostname === 'lintermediaire.be' ) {
+  var server = 'server.php'
 }
-
-console.log(window.location.hostname)
-
 
 async function runAPI(server) {
   fetch(server)
