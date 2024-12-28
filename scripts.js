@@ -69,6 +69,9 @@ if ( window.location.hostname !== 'localhost' ) {
   server = 'server-sample.php'
 }
 
+console.log(window.location.hostname)
+
+
 async function runAPI(server) {
   fetch(server)
   .then(response => response.json())
@@ -89,7 +92,7 @@ async function runAPI(server) {
       image.src = icon
     })
   })
-  .catch(error => {
+  .catch(error => { //console.log(error)
     createElement('span', "Aie !", "#description", "description")
     const elements = document.querySelectorAll('.wrap');
     elements.forEach(element => {
