@@ -65,7 +65,7 @@ function degreeToCardinal(deg) {
 }
 
 server = 'server-sample.php'
-if ( window.location.hostname === 'localhost' ) { //lintermediaire.be
+if ( window.location.hostname === 'lintermediaire.be' ) {
   var server = 'server.php'
 }
 
